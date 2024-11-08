@@ -10,6 +10,12 @@ This project provides modified URP shaders that properly handle alpha transmissi
 - Meta Quest 3
 - Meta Quest 3s
 
+## Demo
+
+[![Demo Video](./Thumbnail-HDR.png)](https://youtube.com/shorts/V2wVoaZ6WsI)
+
+Watch the demo video to see HDR and Bloom effects working with Quest Passthrough!
+
 ## Features
 
 - ✨ HDR rendering support with Passthrough
