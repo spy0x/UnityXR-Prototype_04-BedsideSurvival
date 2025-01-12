@@ -213,9 +213,9 @@ GameObject:
   - component: {fileID: 8305015901756045122}
   - component: {fileID: 8410243950123042292}
   - component: {fileID: 5220026904807171387}
-  - component: {fileID: 7997237056967361909}
+  - component: {fileID: 4733827417675503688}
   m_Layer: 0
-  m_Name: GlowBall
+  m_Name: CeilingLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -309,7 +309,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7997237056967361909
+--- !u!114 &4733827417675503688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -318,13 +318,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6433229152747104582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af310c0f520feda4796f8ea1509c6744, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ee4d6ada9c6d574f8cf8a625139b126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMaterial: {fileID: 2100000, guid: 59c17ecdfb6a0734da8cd9d1aa72c2de, type: 2}
-  minEmissionStrength: 0
-  maxEmissionStrength: 2
-  lerpDuration: 1
+  ceilingLight: {fileID: 5329706160901152335}
+  ceilingLightRenderer: {fileID: 8410243950123042292}
 --- !u!1 &7953705095853784680
 GameObject:
   m_ObjectHideFlags: 0

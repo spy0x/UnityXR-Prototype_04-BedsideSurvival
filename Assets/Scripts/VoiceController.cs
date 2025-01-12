@@ -8,12 +8,16 @@ public class VoiceController : MonoBehaviour
     [SerializeField] AppVoiceExperience appVoiceExperience;
     [SerializeField] TextMeshPro textMeshPro;
     [SerializeField] private bool debug;
+    [SerializeField] OVRPassthroughLayer passthroughLayer;
 
     bool isListening = false;
+    private float originalPassthroughBrightness;
 
 
     private void Start()
     {
+        if (!debug) textMeshPro.gameObject.SetActive(false);
+        originalPassthroughBrightness = passthroughLayer.colorMapEditorBrightness;
         appVoiceExperience.VoiceEvents.OnRequestInitialized.AddListener((msg) =>
         {
             isListening = true;
@@ -36,5 +40,24 @@ public class VoiceController : MonoBehaviour
     {
         if (isListening) return;
         appVoiceExperience.Activate();
+    }
+
+    //Called by Meta Voice SDK intent "turn_device"
+    public void TurnDevice(String[] result)
+    {
+        Debug.Log("Turn Device: " + result[0] + " " + result[1]);
+        if (result[0] == "light")
+        {
+            if (result[1] == "on")
+            {
+                LightController.Instance.SetLight(true);
+                passthroughLayer.colorMapEditorBrightness = originalPassthroughBrightness;
+            }
+            else if (result[1] == "off")
+            {
+                LightController.Instance.SetLight(false);
+                passthroughLayer.colorMapEditorBrightness = -0.8f;
+            }
+        }
     }
 }
