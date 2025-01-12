@@ -6902,7 +6902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1134842983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8965,7 +8965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnOnStart: 1
-  MeshMaterial: {fileID: 2100000, guid: ccf589b723c074315bad425b4e7654cf, type: 2}
+  MeshMaterial: {fileID: 2100000, guid: c1c06aa370535aa45817cd2440362ac9, type: 2}
   Colliders: 1
   CutHoles: 0
   castShadows: 1
@@ -9114,7 +9114,7 @@ MonoBehaviour:
   colorMapEditorContrast: -0.579
   colorMapEditorBrightness: -0.304
   colorMapEditorPosterize: 0
-  colorMapEditorSaturation: -0.025
+  colorMapEditorSaturation: -0.291
   _colorLutSourceTexture: {fileID: 0}
   _colorLutTargetTexture: {fileID: 0}
   _lutWeight: 1
@@ -11869,6 +11869,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6398193017859114797, guid: 90ef764aa187b624da1ab0d3afe39499,
         type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398193017859114797, guid: 90ef764aa187b624da1ab0d3afe39499,
+        type: 3}
       propertyPath: passthroughLayer
       value: 
       objectReference: {fileID: 1487639866}
@@ -11988,11 +11993,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7978846866481883766, guid: 425e8b7ad858e024ca82dde246de9e04,
-        type: 3}
-      propertyPath: _buttonClickActions.Array.data[0].Callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7978846866481883766, guid: 425e8b7ad858e024ca82dde246de9e04,
         type: 3}
