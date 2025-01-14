@@ -347,6 +347,8 @@ MonoBehaviour:
   textMeshPro: {fileID: 2896196838561616789}
   debug: 0
   passthroughLayer: {fileID: 0}
+  listeningClip: {fileID: 8300000, guid: 2081c6934e6a9904690340c7754a2cc5, type: 3}
+  speakingClip: {fileID: 8300000, guid: 6abaccc785c42164ea720e7d71ea20f1, type: 3}
 --- !u!114 &4597357482256957854
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class AssistantDevice : MonoBehaviour
     [SerializeField] [ColorUsage(true, true)] private Color assistantColorThinking;
     [SerializeField] [ColorUsage(true, true)] private Color assistantColorSpeaking;
     [SerializeField] [ColorUsage(true, true)] private Color assistantColorIdle;
+    [SerializeField] AudioSource audioSource;
     
     private static AssistantDevice instance;
     public static AssistantDevice Instance => instance;
@@ -61,7 +62,10 @@ public class AssistantDevice : MonoBehaviour
             ledRenderer.material.SetColor("_EmissionColor", color);
         }
     }
-
+    public void PlayAudio(AudioClip audioClip)
+    {
+        audioSource.PlayOneShot(audioClip);
+    }
     public void GoToIdle()
     {
         SetLedsEmissiveColor(AssistantDeviceState.Idle);

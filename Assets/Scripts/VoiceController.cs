@@ -9,13 +9,20 @@ public class VoiceController : MonoBehaviour
     [SerializeField] TextMeshPro textMeshPro;
     [SerializeField] private bool debug;
     [SerializeField] OVRPassthroughLayer passthroughLayer;
+    [SerializeField] AudioClip listeningClip;
+    [SerializeField] AudioClip speakingClip;
 
     bool isListening = false;
     private bool canUseVoice = true;
     private float originalPassthroughBrightness;
     private static VoiceController instance;
     public static VoiceController Instance => instance;
-    public bool CanUseVoice {get => canUseVoice; set => canUseVoice = value;}
+
+    public bool CanUseVoice
+    {
+        get => canUseVoice;
+        set => canUseVoice = value;
+    }
 
     private void Awake()
     {
@@ -37,6 +44,7 @@ public class VoiceController : MonoBehaviour
         {
             isListening = true;
             AssistantDevice.Instance.SetLedsEmissiveColor(AssistantDeviceState.Listening);
+            if (listeningClip) AssistantDevice.Instance.PlayAudio(listeningClip);
             Debug.Log("Request initialized");
         });
         appVoiceExperience.VoiceEvents.OnFullTranscription.AddListener((transcription) =>
@@ -54,7 +62,7 @@ public class VoiceController : MonoBehaviour
         appVoiceExperience.VoiceEvents.OnPartialResponse.AddListener((response) =>
         {
             // AssistantDevice.Instance.SetLedsEmissiveColor(AssistantDeviceState.Thinking);
-            Debug.Log("Partial response: " + response);
+            // Debug.Log("Partial response: " + response);
         });
     }
 
@@ -75,11 +83,30 @@ public class VoiceController : MonoBehaviour
             {
                 LightController.Instance.SetLight(true);
                 passthroughLayer.colorMapEditorBrightness = originalPassthroughBrightness;
+                AssistantDevice.Instance.PlayAudio(speakingClip);
+                GameManager.Instance.IsLightOn = true;
             }
             else if (result[1] == "off")
             {
                 LightController.Instance.SetLight(false);
                 passthroughLayer.colorMapEditorBrightness = -0.8f;
+                AssistantDevice.Instance.PlayAudio(speakingClip);
+                GameManager.Instance.IsLightOn = false;
+            }
+        }
+        else if (result[0] == "TV")
+        {
+            if (result[1] == "on")
+            {
+                TVManager.Instance.PlayRandomShow();
+                AssistantDevice.Instance.PlayAudio(speakingClip);
+                GameManager.Instance.IsTVOn = true;
+            }
+            else if (result[1] == "off")
+            {
+                TVManager.Instance.StopShow();
+                AssistantDevice.Instance.PlayAudio(speakingClip);
+                GameManager.Instance.IsTVOn = false;
             }
         }
     }
