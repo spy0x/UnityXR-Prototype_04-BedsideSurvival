@@ -137,6 +137,7 @@ public class GameManager : MonoBehaviour
         if (gameOverPanel)
         {
             DisablePlayer();
+            audioSource.Stop();
             gameOverPanel.SetActive(true);
             audioSource.PlayOneShot(jumpScareSound);
             yield return new WaitForSeconds(jumpScareSound.length);

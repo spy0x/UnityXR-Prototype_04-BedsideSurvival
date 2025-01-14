@@ -1937,7 +1937,7 @@ MonoBehaviour:
   mrcActivationMode: 0
   launchSimultaneousHandsControllersOnStartup: 0
   isInsightPassthroughEnabled: 1
-  shouldBoundaryVisibilityBeSuppressed: 0
+  shouldBoundaryVisibilityBeSuppressed: 1
   requestBodyTrackingPermissionOnStartup: 0
   requestFaceTrackingPermissionOnStartup: 0
   requestEyeTrackingPermissionOnStartup: 0
@@ -2004,7 +2004,7 @@ MonoBehaviour:
   sleepinessIncreaseRate: 2
   lightsOnDecreaseRatio: 0.5
   tvOnDecreaseRatio: 0.4
-  eyesClosedIncreaseRatio: 5
+  eyesClosedIncreaseRatio: 2
   timeLeft: 180
   audioSource: {fileID: 2272782823173343052}
   sleepinessSlider: {fileID: 6900555455946453738}
@@ -2030,11 +2030,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: bf57d1ba7466bc94eb126b6e1ef2d5e2, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
