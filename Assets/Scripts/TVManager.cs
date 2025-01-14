@@ -15,6 +15,16 @@ public class TVManager : MonoBehaviour
     private static TVManager instance;
     public static TVManager Instance => instance;
 
+    private void OnEnable()
+    {
+        GameManager.OnGameFinished += StopShow;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnGameFinished -= StopShow;
+    }
+
     private void Start()
     {
         tvScreen.SetActive(false);

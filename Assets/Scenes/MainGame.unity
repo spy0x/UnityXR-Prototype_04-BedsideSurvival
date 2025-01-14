@@ -1074,31 +1074,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[BuildingBlock] Camera Rig'
       objectReference: {fileID: 0}
-    - target: {fileID: 2380413507450345368, guid: 03d329ea8bc5b464498cfc37cb37e063,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380413507450345368, guid: 03d329ea8bc5b464498cfc37cb37e063,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 5727896685261328255, guid: 03d329ea8bc5b464498cfc37cb37e063,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5727896685261328255, guid: 03d329ea8bc5b464498cfc37cb37e063,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5843767428267260115, guid: 03d329ea8bc5b464498cfc37cb37e063,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.534
-      objectReference: {fileID: 0}
     - target: {fileID: 6569939610704593768, guid: 03d329ea8bc5b464498cfc37cb37e063,
         type: 3}
       propertyPath: m_AnchorMax.y

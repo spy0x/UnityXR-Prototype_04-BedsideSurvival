@@ -25,8 +25,13 @@ public class LightController : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
+    }
+
+    private void OnEnable()
+    {
+        GameManager.OnGameFinished += () => SetLight(false);
     }
 
     private void Start()

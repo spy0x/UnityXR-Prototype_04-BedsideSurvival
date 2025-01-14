@@ -69,6 +69,7 @@ public class VoiceController : MonoBehaviour
     //Called by building Meta SDKb lock Controller Input Map.
     public void OnButtonOneUp()
     {
+        if (GameManager.Instance.IsGameFinished) return;
         if (isListening || !canUseVoice) return;
         appVoiceExperience.Activate();
     }
@@ -76,6 +77,7 @@ public class VoiceController : MonoBehaviour
     //Called by Meta Voice SDK intent "turn_device"
     public void TurnDevice(String[] result)
     {
+        if (GameManager.Instance.IsGameFinished) return;
         Debug.Log("Turn Device: " + result[0] + " " + result[1]);
         if (result[0] == "light")
         {

@@ -11,6 +11,7 @@ public class VignetteController : MonoBehaviour
     private float originalVignetteFallOff;
     private bool hasEyesClosed = false;
     public bool HasEyesClosed => hasEyesClosed;
+    
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class VignetteController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.IsGameFinished) return;
         // Get the current value of the right trigger
         float rightTriggerValue = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch);
         // Get the current value of the left trigger
