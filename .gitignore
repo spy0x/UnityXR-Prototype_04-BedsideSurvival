@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/unity
 # Edit at https://www.toptal.com/developers/gitignore?templates=unity
 
+Don t Hug me I m Scared.*
+
 .utmp/
 Assets/Plugins/Sirenix/
 
