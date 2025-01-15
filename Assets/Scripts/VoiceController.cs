@@ -112,4 +112,15 @@ public class VoiceController : MonoBehaviour
             }
         }
     }
+    //Called by Meta Voice SDK intent "change_channel"
+    public void ChangeDevice(String[] result)
+    {
+        if (GameManager.Instance.IsGameFinished) return;
+        Debug.Log("Change Channel: " + result[0]);
+        if (result[0] == "TV")
+        {
+            TVManager.Instance.ChangeChannel();
+            AssistantDevice.Instance.PlayAudio(speakingClip);
+        }
+    }
 }

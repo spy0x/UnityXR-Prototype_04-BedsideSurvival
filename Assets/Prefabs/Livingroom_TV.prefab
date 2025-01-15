@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2442746772730815981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -183,6 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tvShows:
   - {fileID: 11400000, guid: ceec8c6385a8c2f45acc39978e11a092, type: 2}
+  - {fileID: 11400000, guid: 54aaae2728e64bd489ef7c91fd083af7, type: 2}
+  - {fileID: 11400000, guid: 467db9fe51d27b24880ff37bd442346a, type: 2}
   tvScreen: {fileID: 2272165801122366222}
   videoPlayer: {fileID: 5752367143848908722}
   audioSource: {fileID: 6024739271075680891}

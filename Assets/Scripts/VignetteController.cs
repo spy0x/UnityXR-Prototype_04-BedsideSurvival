@@ -9,9 +9,7 @@ public class VignetteController : MonoBehaviour
     [SerializeField] OVRVignette vignette;
     [SerializeField] private float vignetteFullFallOff = 0.5f;
     private float originalVignetteFallOff;
-    private bool hasEyesClosed = false;
-    public bool HasEyesClosed => hasEyesClosed;
-    
+
 
     private void Start()
     {
@@ -47,6 +45,6 @@ public class VignetteController : MonoBehaviour
         }
 
         vignette.VignetteFalloffDegrees = targetFallOff;
-        hasEyesClosed = Mathf.Approximately(targetFallOff, vignetteFullFallOff);
+        GameManager.Instance.HasEyesClosed = Mathf.Approximately(targetFallOff, vignetteFullFallOff);
     }
 }

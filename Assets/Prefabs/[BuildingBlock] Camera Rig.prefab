@@ -2012,14 +2012,18 @@ MonoBehaviour:
   gameWinPanel: {fileID: 3319865416794335127}
   gameOverPanel: {fileID: 8714846954002159223}
   sleepPanel: {fileID: 6667623634926396656}
-  vignetteController: {fileID: 4683229349732895528}
   rightHand: {fileID: 7104377693106298067}
   leftHand: {fileID: 5678698988328118645}
+  playerHead: {fileID: 3568869182109366854}
+  bedMaterial: {fileID: 2100000, guid: c1c06aa370535aa45817cd2440362ac9, type: 2}
   enemyJumpScare: {fileID: 6508522999496204905}
   jumpScareSound: {fileID: 8300000, guid: e895e05f8e7d5ef48a3a2a0620fcf123, type: 3}
   delayBeforeRestart: 3
+  jumpScareMusic: {fileID: 8300000, guid: d8c1224512f19fa4e8c91e802c9a66f4, type: 3}
   sleepSound: {fileID: 8300000, guid: 3866f8b4ec9abbf41ba49d1564b8f9b5, type: 3}
   delayBeforeGameOver: 3
+  winMusic: {fileID: 8300000, guid: 6fd2f9d4ab7c23a4c84a794dac8d8667, type: 3}
+  winSound: {fileID: 8300000, guid: 69e4ce5d3e61aa24c96191f33a139496, type: 3}
 --- !u!82 &2272782823173343052
 AudioSource:
   m_ObjectHideFlags: 0

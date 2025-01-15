@@ -15,6 +15,7 @@ public class RoomSpawner : MonoBehaviour
     private MRUKRoom room;
     private MRUKAnchor ceilingAnchor;
     private MRUKAnchor screen;
+    private MRUKAnchor bed;
 
     private void OnEnable()
     {
@@ -68,16 +69,15 @@ public class RoomSpawner : MonoBehaviour
         return screenAnchors;
     }
 
-    //Setted when mruk has finish creating the room
+    // Called by MRUK when the room is created
 
     public void SetRoom()
     {
         room = MRUK.Instance.GetCurrentRoom();
         ceilingAnchor = room.CeilingAnchor;
         if (ceilingLamp) PlaceCeilingLamp();
-        if (assistantDevice) PlaceAssistantDevice();
+        // if (assistantDevice) PlaceAssistantDevice();
     }
-
 
     private void PlaceCeilingLamp()
     {

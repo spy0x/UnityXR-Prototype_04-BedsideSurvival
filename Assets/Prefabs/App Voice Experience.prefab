@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 5741521117115080155}
   - component: {fileID: 6398193017859114797}
   - component: {fileID: 4597357482256957854}
+  - component: {fileID: 8631227490981833643}
   m_Layer: 0
   m_Name: App Voice Experience
   m_TagString: Untagged
@@ -391,6 +392,54 @@ MonoBehaviour:
       - m_Target: {fileID: 6398193017859114797}
         m_TargetAssemblyTypeName: VoiceController, Assembly-CSharp
         m_MethodName: TurnDevice
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDidNotMatch:
+    m_PersistentCalls:
+      m_Calls: []
+  onOutOfDomain:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8631227490981833643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914530558418301222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591c3d6f017c11b4faa41506d75635b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Voice: {fileID: 5741521117115080155}
+  ValidateEarly: 0
+  intent: change_channel
+  confidenceThreshold: 0.6
+  valueMatchers:
+  - path: entities.device:device[0].value
+    witValueReference: {fileID: 0}
+    contentRequired: 1
+    matchMethod: 0
+    comparisonMethod: 0
+    matchValue: 
+    floatingPointComparisonTolerance: 0.00009999999747378752
+    allowConfidenceOverlap: 0
+    confidenceRanges: []
+  formattedValueEvents: []
+  onMultiValueEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6398193017859114797}
+        m_TargetAssemblyTypeName: VoiceController, Assembly-CSharp
+        m_MethodName: ChangeDevice
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
