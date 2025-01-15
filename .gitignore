@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=unity
 
 Don t Hug me I m Scared.*
+*.mp4
 
 .utmp/
 Assets/Plugins/Sirenix/
